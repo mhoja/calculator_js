@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="utf-8">
+    <title> calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="color.css">  
+</head> 
+<body> 
+    <div id="container">
+        <div id="body">
+            <div id="mainbody">
+                <h4 id="instruction"> Java Script Calculator </h4>
+                    <form id="form" name="form" >
+                        <label for="operand1" class="labels">Operand1 : </label>
+                        <input type="text" name="operand1" class="inputs" id="operand1" placeholder="eg. 2" onchange="errorClear()" onkeyup="validator()">
+                        <span id="error1">error one </span> <br />
+                        <label for="operand2" class="labels">Operand2 : </label>
+                        <input type="text" name="operand2" class="inputs" id="operand2" placeholder="eg. 4" onchange="errorClear()" onkeyup="validator()">
+                        <span id="error2">error two</span> <br />
+                        <label for="operations" class="labels">Choose Operation : </label>
+                        <select name=" " id="operator"  onchange=" validator()" >
+                            <option value=" "> operations</option>
+                            <option value="+">Addition(+)</option>
+                            <option value="-">Substraction(-)</option>
+                            <option value="*">Multiplicati</option>
+                            <option value="/">Division(/)</option>
+                            
+                        </select>
+                        <span id="error3">error three</span> <br />
+                    </form>
+                    <input type="button" id="submit" value="Calculate" onclick="computation()">
+            </div>
+        </div>
+        <div id="screen">
+            <h1 id="Output">Output</h1>
+        </div>
+    </div>
+   
+    <script src="calculator.js"></script>
+</body>   
+</html> 
